@@ -41,11 +41,12 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-let navi = document.querySelector('nav')
+let navi = document.querySelector('a')
 
-navi.textContent = siteContent["nav"]["nav-item-1"];
-navi.textContent = siteContent["nav"]["nav-item-2"];
-navi.textContent = siteContent["nav"]["nav-item-3"];
-navi.textContent = siteContent["nav"]["nav-item-4"];
-navi.textContent = siteContent["nav"]["nav-item-5"];
-navi.textContent = siteContent.nav
+
+for(let ele in siteContent.nav) {
+navi.textContent = siteContent["nav"][ele];
+}
+
+
+
