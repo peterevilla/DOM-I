@@ -41,17 +41,11 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-<<<<<<< HEAD
-let navi = document.querySelector('a')
-
-
-for(let ele in siteContent.nav) {
-navi.textContent = siteContent["nav"][ele];
-}
-=======
 let navigation = document.querySelectorAll('a');
 
 
+
+// nav bar 
 navigation[0].textContent = siteContent["nav"]["nav-item-1"]
 navigation[1].textContent = siteContent["nav"]["nav-item-2"]
 navigation[2].textContent = siteContent["nav"]["nav-item-3"]
@@ -59,8 +53,34 @@ navigation[3].textContent = siteContent["nav"]["nav-item-4"]
 navigation[4].textContent = siteContent["nav"]["nav-item-5"]
 navigation[5].textContent = siteContent["nav"]["nav-item-6"]
 
+navigation.forEach(element => { element.style.color = 'green'})
+
+let newElement1 = document.createElement('a');
+
+newElement1.textContent = 'Resume';
+
+const parentElement = document.querySelector('nav');
 
 
+
+parentElement.append(newElement1);
+
+
+let newElement2 = document.createElement('a');
+newElement2.textContent = 'Social';
+
+parentElement.prepend(newElement2);
+
+newElement1.style.color = 'green';
+newElement2.style.color = 'green';
+newElement1.style.textDecoration = 'none';
+newElement2.style.textDecoration = 'none';
+
+
+
+
+
+// image and title
 let image = document.getElementById("cta-img");
 image.setAttribute('src', siteContent['cta']['img-src'])
 
@@ -70,7 +90,64 @@ title.textContent = siteContent["cta"]["h1"];
 
 let box = document.querySelector('.cta');
 
-box.style.display = 'flex'
+box.style.display = 'flex';
+
+//button
+let buttonDom = document.querySelector('button');
+
+buttonDom.textContent = siteContent['cta']['button'];
+
+
+//top content
+
+let content = document.querySelector('.top-content')
+
+content.style.display = 'flex';
+
+
+
+let content1 = document.querySelectorAll('h4')
+
+content1[0].textContent = siteContent['main-content']['features-h4'];
+content1[1].textContent = siteContent['main-content']['about-h4'];
+
+
+let content2 = document.querySelectorAll('p')
+
+content2[0].textContent = siteContent['main-content']['features-content']
+content2[1].textContent = siteContent['main-content']['about-content']
+
+//image2
+
+let image2 = document.getElementById("middle-img");
+image2.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+//botton content
+
+let content3 = document.querySelector('.bottom-content')
+
+content3.style.display = 'flex';
+
+content1[2].textContent = siteContent['main-content']['services-h4'];
+content1[3].textContent = siteContent['main-content']['product-h4'];
+content1[4].textContent = siteContent['main-content']['vision-h4'];
+
+content2[2].textContent = siteContent['main-content']['services-content']
+content2[3].textContent = siteContent['main-content']['product-content']
+content2[4].textContent = siteContent['main-content']['vision-content']
+
+
+//contact 
+
+content1[5].textContent = siteContent['contact']['contact-h4'];
+content2[5].textContent = siteContent['contact']['address']
+content2[6].textContent = siteContent['contact']['phone']
+content2[7].textContent = siteContent['contact']['email']
+
+
+//footer 
+
+content2[8].textContent = siteContent['footer']['copyright']
 
 
 
@@ -87,7 +164,20 @@ box.style.display = 'flex'
 
 
 
->>>>>>> ad9f8b637f90e06930f7bdf5b19b91c542f0bfd5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
